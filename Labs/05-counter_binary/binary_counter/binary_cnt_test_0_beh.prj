@@ -1,0 +1,2 @@
+vhdl work "binary_cnt.vhd"
+vhdl work "binary_cnt_test_0.vhd"

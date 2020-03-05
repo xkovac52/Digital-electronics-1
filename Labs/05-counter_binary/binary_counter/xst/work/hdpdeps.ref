@@ -1,0 +1,30 @@
+V3 15
+FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/04-adder/binary_adder/hex_to_7seg.vhd 2020/03/05.11:51:53 P.20131013
+EN work/hex_to_7seg 1583405833 \
+      FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/04-adder/binary_adder/hex_to_7seg.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/hex_to_7seg/Behavioral 1583405834 \
+      FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/04-adder/binary_adder/hex_to_7seg.vhd \
+      EN work/hex_to_7seg 1583405833
+FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/05-counter_binary/binary_counter/binary_cnt.vhd 2020/03/05.10:42:17 P.20131013
+EN work/binary_cnt 1583405831 \
+      FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/05-counter_binary/binary_counter/binary_cnt.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/binary_cnt/Behavioral 1583405832 \
+      FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/05-counter_binary/binary_counter/binary_cnt.vhd \
+      EN work/binary_cnt 1583405831
+FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/05-counter_binary/binary_counter/clock_enable.vhd 2020/03/05.11:31:33 P.20131013
+EN work/clock_enable 1583405829 \
+      FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/05-counter_binary/binary_counter/clock_enable.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/clock_enable/Behavioral 1583405830 \
+      FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/05-counter_binary/binary_counter/clock_enable.vhd \
+      EN work/clock_enable 1583405829
+FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/05-counter_binary/binary_counter/top.vhd 2020/03/05.11:55:58 P.20131013
+EN work/top 1583405835 \
+      FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/05-counter_binary/binary_counter/top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1583405836 \
+      FL /home/lab661/Documents/xkovac52/Digital-electronics-1/Labs/05-counter_binary/binary_counter/top.vhd \
+      EN work/top 1583405835 CP work/clock_enable CP work/binary_cnt \
+      CP work/hex_to_7seg

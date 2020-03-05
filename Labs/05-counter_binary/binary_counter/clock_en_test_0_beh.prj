@@ -1,0 +1,2 @@
+vhdl work "clock_enable.vhd"
+vhdl work "clock_en_test_0.vhd"
