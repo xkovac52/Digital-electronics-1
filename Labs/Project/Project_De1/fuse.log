@@ -1,23 +1,17 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Xilinx/Project_De1/testbench_isim_beh.exe -prj C:/Xilinx/Project_De1/testbench_beh.prj work.testbench 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Xilinx/Project_De1/top_isim_beh.exe -prj C:/Xilinx/Project_De1/top_beh.prj work.top 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
+Parsing VHDL file "C:/Xilinx/Project_De1/hex_to_7seg.vhd" into library work
+Parsing VHDL file "C:/Xilinx/Project_De1/clock_enable.vhd" into library work
+Parsing VHDL file "C:/Xilinx/Project_De1/driver_7seg.vhd" into library work
 Parsing VHDL file "C:/Xilinx/Project_De1/ALU.vhd" into library work
-Parsing VHDL file "C:/Xilinx/Project_De1/testbench.vhd" into library work
-Starting static elaboration
-WARNING:HDLCompiler:960 - "C:/Xilinx/Project_De1/ALU.vhd" Line 90: Expression has incompatible type
-WARNING:HDLCompiler:960 - "C:/Xilinx/Project_De1/ALU.vhd" Line 92: Expression has incompatible type
-Completed static elaboration
-Compiling package standard
-Compiling package std_logic_1164
-Compiling package numeric_std
-Compiling package std_logic_arith
-Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity ALU [\ALU(1)\]
-Compiling architecture behavior of entity testbench
-Time Resolution for simulation is 1ps.
-Compiled 8 VHDL Units
-Built simulation executable C:/Xilinx/Project_De1/testbench_isim_beh.exe
-Fuse Memory Usage: 35880 KB
-Fuse CPU Usage: 1468 ms
+ERROR:HDLCompiler:841 - "C:/Xilinx/Project_De1/ALU.vhd" Line 105: Expecting type integer for <floor>.
+ERROR:HDLCompiler:258 - "C:/Xilinx/Project_De1/ALU.vhd" Line 106: Cannot convert type integer to type std_logic_vector
+ERROR:HDLCompiler:841 - "C:/Xilinx/Project_De1/ALU.vhd" Line 110: Expecting type integer for <floor>.
+ERROR:HDLCompiler:258 - "C:/Xilinx/Project_De1/ALU.vhd" Line 111: Cannot convert type integer to type std_logic_vector
+ERROR:HDLCompiler:841 - "C:/Xilinx/Project_De1/ALU.vhd" Line 115: Expecting type integer for <floor>.
+ERROR:HDLCompiler:258 - "C:/Xilinx/Project_De1/ALU.vhd" Line 116: Cannot convert type integer to type std_logic_vector
+ERROR:HDLCompiler:854 - "C:/Xilinx/Project_De1/ALU.vhd" Line 52: Unit <behavioral> ignored due to previous errors.
+VHDL file C:/Xilinx/Project_De1/ALU.vhd ignored due to errors

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="841" delta="new" >"C:\Xilinx\Project_De1\ALU.vhd" Line 84: Expecting type <arg fmt="%s" index="2">std_logic_vector</arg> for &lt;<arg fmt="%s" index="1">shift_left</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="841" delta="new" >"C:\Xilinx\Project_De1\ALU.vhd" Line 86: Expecting type <arg fmt="%s" index="2">std_logic_vector</arg> for &lt;<arg fmt="%s" index="1">shift_left</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="841" delta="new" >"C:\Xilinx\Project_De1\ALU.vhd" Line 88: Expecting type <arg fmt="%s" index="2">std_logic_vector</arg> for &lt;<arg fmt="%s" index="1">shift_right</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="841" delta="new" >"C:\Xilinx\Project_De1\ALU.vhd" Line 90: Expecting type <arg fmt="%s" index="2">std_logic_vector</arg> for &lt;<arg fmt="%s" index="1">shift_right</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="new" >"C:\Xilinx\Project_De1\ALU.vhd" Line 47: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
+</msg>
+
+</messages>
+
