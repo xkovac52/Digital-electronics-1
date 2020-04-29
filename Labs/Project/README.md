@@ -19,8 +19,25 @@ I used four constants,move, hun, ten & one used for the calculation in the procc
 + **s_res_int** converted number of s_res from binary to integer to help calculate the display numbers easier.
 + **s_digit_calc** a signal that temponareli stores the number of hundreds/tens/one in s_res_int.
 #### Process
-+ **case(choice_i)** its job is to look at the value of choice_i and choose the right operation
-
++ **case(choice_i)** its job is to look at the value of choice_i and choose the right operation.
++ **for 0000** is Add - it simply adds number 2 to number 1.
++ **for 0001** is Substraction - it simply substarcts number 2 from number 1.
++ **for 0010** is Multiplication - it multiplies number 1 with number 2.
++ **for 0011** is Division - it divides number 1 with number 2. 
++ **for 0100** is Incrementation for number 1 - it increments number 1 by one.
++ **for 0101** is Incrementation for number 2 - it increments number 2 by one.
++ **for 0110** is Decrementation for number 1 - it decrements number 1 by one.
++ **for 0111** is Decrementation for number 2 - it decrements number 2 by one.
++ **for 1000** is AND - Logical function number 1 AND number 2.
++ **for 1001** is OR - Logical function number 1 OR number 2.
++ **for 1010** is XOR - Logical function number 1 XOR number 2.
++ **for 1011** is Left Shift for for number 1 - moves the bits in number 1 to the left by the constat move.
++ **for 1100** is Left Shift for for number 2 - moves the bits in number 2 to the left by the constat move.
++ **for 1101** is Right Shift for for number 1 - moves the bits in number 1 to the right by the constat move.
++ **for 1110** is Right Shift for for number 2 - moves the bits in number 2 to the right by the constat move.
++ **for 1111** is Comparation - Compares number 1 to number 2 and writes the higher number into the result.
++ in the case the choice_i would be a different number than the ones above it will default to the add function.
+Bellow the end case; is my self made binary to binary coded decimal convertor. It function my converting s_res to an integer, and after that dividing the number with the constand hun which is 100. This gives us a real number which is  rounded down with s_digit_calc <= FLOOR(s_res_int / hun) gives us the number of hundreds in our number and writes it into the alu_disp_1_o with alu_disp_1_o <= STD_LOGIC_VECTOR(s_digit_calc) after that s_res_int <= s_res_int - s_digit_calc * hun which removes the hundreds from our number and makes it so we can go onto dividing with 10 to get the number of tens. This is repated twice so we can get the tens and ones and send each one to each alu_disp_x_o output.
 ### ALU_tv_00.vhd
 ### top.vhd
 ## The result / The conclusion
