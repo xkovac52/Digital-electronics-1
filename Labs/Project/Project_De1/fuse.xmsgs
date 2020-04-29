@@ -5,25 +5,25 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="841" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 105: Expecting type <arg fmt="%s" index="2">integer</arg> for &lt;<arg fmt="%s" index="1">floor</arg>&gt;.
+<msg type="error" file="HDLCompiler" num="841" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 108: Expecting type <arg fmt="%s" index="2">integer</arg> for &lt;<arg fmt="%s" index="1">floor</arg>&gt;.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="258" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 106: Cannot convert type <arg fmt="%s" index="1">integer</arg> to type <arg fmt="%s" index="2">std_logic_vector</arg>
+<msg type="error" file="HDLCompiler" num="258" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 109: Cannot convert type <arg fmt="%s" index="1">integer</arg> to type <arg fmt="%s" index="2">std_logic_vector</arg>
 </msg>
 
-<msg type="error" file="HDLCompiler" num="841" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 110: Expecting type <arg fmt="%s" index="2">integer</arg> for &lt;<arg fmt="%s" index="1">floor</arg>&gt;.
+<msg type="error" file="HDLCompiler" num="841" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 113: Expecting type <arg fmt="%s" index="2">integer</arg> for &lt;<arg fmt="%s" index="1">floor</arg>&gt;.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="258" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 111: Cannot convert type <arg fmt="%s" index="1">integer</arg> to type <arg fmt="%s" index="2">std_logic_vector</arg>
+<msg type="error" file="HDLCompiler" num="258" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 114: Cannot convert type <arg fmt="%s" index="1">integer</arg> to type <arg fmt="%s" index="2">std_logic_vector</arg>
 </msg>
 
-<msg type="error" file="HDLCompiler" num="841" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 115: Expecting type <arg fmt="%s" index="2">integer</arg> for &lt;<arg fmt="%s" index="1">floor</arg>&gt;.
+<msg type="error" file="HDLCompiler" num="841" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 118: Expecting type <arg fmt="%s" index="2">integer</arg> for &lt;<arg fmt="%s" index="1">floor</arg>&gt;.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="258" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 116: Cannot convert type <arg fmt="%s" index="1">integer</arg> to type <arg fmt="%s" index="2">std_logic_vector</arg>
+<msg type="error" file="HDLCompiler" num="258" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 119: Cannot convert type <arg fmt="%s" index="1">integer</arg> to type <arg fmt="%s" index="2">std_logic_vector</arg>
 </msg>
 
-<msg type="error" file="HDLCompiler" num="854" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 52: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
+<msg type="error" file="HDLCompiler" num="854" delta="unknown" >"C:/Xilinx/Project_De1/ALU.vhd" Line 56: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>

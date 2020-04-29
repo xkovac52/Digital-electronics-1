@@ -1,17 +1,14 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Xilinx/Project_De1/top_isim_beh.exe -prj C:/Xilinx/Project_De1/top_beh.prj work.top 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Xilinx/Project_De1/ALU_tb_00_isim_beh.exe -prj C:/Xilinx/Project_De1/ALU_tb_00_beh.prj work.ALU_tb_00 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Xilinx/Project_De1/hex_to_7seg.vhd" into library work
-Parsing VHDL file "C:/Xilinx/Project_De1/clock_enable.vhd" into library work
-Parsing VHDL file "C:/Xilinx/Project_De1/driver_7seg.vhd" into library work
 Parsing VHDL file "C:/Xilinx/Project_De1/ALU.vhd" into library work
-ERROR:HDLCompiler:841 - "C:/Xilinx/Project_De1/ALU.vhd" Line 105: Expecting type integer for <floor>.
-ERROR:HDLCompiler:258 - "C:/Xilinx/Project_De1/ALU.vhd" Line 106: Cannot convert type integer to type std_logic_vector
-ERROR:HDLCompiler:841 - "C:/Xilinx/Project_De1/ALU.vhd" Line 110: Expecting type integer for <floor>.
-ERROR:HDLCompiler:258 - "C:/Xilinx/Project_De1/ALU.vhd" Line 111: Cannot convert type integer to type std_logic_vector
-ERROR:HDLCompiler:841 - "C:/Xilinx/Project_De1/ALU.vhd" Line 115: Expecting type integer for <floor>.
-ERROR:HDLCompiler:258 - "C:/Xilinx/Project_De1/ALU.vhd" Line 116: Cannot convert type integer to type std_logic_vector
-ERROR:HDLCompiler:854 - "C:/Xilinx/Project_De1/ALU.vhd" Line 52: Unit <behavioral> ignored due to previous errors.
+ERROR:HDLCompiler:841 - "C:/Xilinx/Project_De1/ALU.vhd" Line 108: Expecting type integer for <floor>.
+ERROR:HDLCompiler:258 - "C:/Xilinx/Project_De1/ALU.vhd" Line 109: Cannot convert type integer to type std_logic_vector
+ERROR:HDLCompiler:841 - "C:/Xilinx/Project_De1/ALU.vhd" Line 113: Expecting type integer for <floor>.
+ERROR:HDLCompiler:258 - "C:/Xilinx/Project_De1/ALU.vhd" Line 114: Cannot convert type integer to type std_logic_vector
+ERROR:HDLCompiler:841 - "C:/Xilinx/Project_De1/ALU.vhd" Line 118: Expecting type integer for <floor>.
+ERROR:HDLCompiler:258 - "C:/Xilinx/Project_De1/ALU.vhd" Line 119: Cannot convert type integer to type std_logic_vector
+ERROR:HDLCompiler:854 - "C:/Xilinx/Project_De1/ALU.vhd" Line 56: Unit <behavioral> ignored due to previous errors.
 VHDL file C:/Xilinx/Project_De1/ALU.vhd ignored due to errors

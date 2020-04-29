@@ -33,19 +33,23 @@ use IEEE.math_real.all;
 
 entity ALU is
 	generic (
-		constant move: natural := 1
+		constant move: natural := 1;
+		constant hun: natural := 100;
+		constant ten: natural := 10;
+		constant one: natural := 1
 	);
 	
 	Port (
 		--Input for setting numbers/choosing with operation we want to use
-		clk_i	:	in STD_LOGIC;
+		clk_i		:	in STD_LOGIC;
 		num1_i	: 	in STD_LOGIC_VECTOR(3 downto 0);
 		num2_i	:	in STD_LOGIC_VECTOR(3 downto 0);
 		choice_i :	in STD_LOGIC_VECTOR(3 downto 0);
 		--Output to send to 7seg display
 		alu_disp_1_o	:	out STD_LOGIC_VECTOR(3 downto 0); -- Used for displaying Hundreds
 		alu_disp_2_o	:	out STD_LOGIC_VECTOR(3 downto 0); -- Used for displaying Tens
-		alu_disp_3_o	:	out STD_LOGIC_VECTOR(3 downto 0)  -- Used for displaying Ones
+		alu_disp_3_o	:	out STD_LOGIC_VECTOR(3 downto 0);  -- Used for displaying Ones
+		alu_test_o		:	out STD_LOGIC_VECTOR(7 downto 0)
 	);
 end ALU;
 	
@@ -54,7 +58,7 @@ architecture Behavioral of ALU is
 		signal s_res_int	:  integer; --Convertion of binary number to integer for BCD calculation
 		signal s_digit_calc	:  integer; --The calculation of the amout of times hundreds/tens/ones are in a number
 begin
-		p_calculation	:	process(num1_i, num2_i, choice_i, s_res, s_res_int, s_digit_calc)
+		p_calculation	:	process(clk_i, num1_i, num2_i, choice_i, s_res, s_res_int, s_digit_calc)
 		begin
 			if rising_edge(clk_i) then
 				case(choice_i) is
@@ -100,21 +104,21 @@ begin
 					end if;
 				when others => s_res <= num1_i + num2_i;--The default calculation if all switches are off
 			end case;
-			--A basic binary to BCD convertor
-			--Calculating the number for the First Display (first digit: Hundreds)
 			s_res_int <= to_integer(signed(s_res)); --Converting binary numbers into integer
-			s_digit_calc <= FLOOR(s_res_int / 100); --Calculating the number of Hundreds and rounding down the final number
+			s_digit_calc <= FLOOR(s_res_int / hun); --Calculating the number of Hundreds and rounding down the final number
 			alu_disp_1_o <= STD_LOGIC_VECTOR(s_digit_calc); --Converting integer back to binary so the 7seg can display the number
-			s_res_int <= s_res_int - s_digit_calc * 100; --Removing the hundreds from the number so the cant be more then 9 tens
+			s_res_int <= s_res_int - s_digit_calc * hun; --Removing the hundreds from the number so the cant be more then 9 tens
 			--Calculating the number for the Second Display (second digit: tens)
 			s_res_int <= to_integer(signed(s_res));
-			s_digit_calc <= FLOOR(s_res_int / 10);
+			s_digit_calc <= FLOOR(s_res_int / ten);
 			alu_disp_2_o <= STD_LOGIC_VECTOR(s_digit_calc);
-			s_res_int <= s_res_int - s_digit_calc * 10;
+			s_res_int <= s_res_int - s_digit_calc * ten;
 			--Calculating the number for the Third Display (third digit: ones)
 			s_res_int <= to_integer(signed(s_res));
-			s_digit_calc <= FLOOR(s_res_int / 1);
+			s_digit_calc <= FLOOR(s_res_int / ten);
 			alu_disp_3_o <= STD_LOGIC_VECTOR(s_digit_calc);
+			--Test used for easier testbench testing
+			alu_test_o <= s_res;
 		end if;	
 	end process p_calculation;		
 			

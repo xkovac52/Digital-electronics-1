@@ -1,0 +1,138 @@
+#-----------------------------------------------------------------------
+#
+# Constraints file with pin assignments.
+# CoolRunner-II CPLD starter board, ISE Design Suite 14.7
+#
+# Copyright (c) 2017-2020 Tomas Fryza
+# Dept. of Radio Electronics, Brno University of Technology, Czechia
+# This work is licensed under the terms of the MIT license.
+#
+#-----------------------------------------------------------------------
+
+#-----------------------------------------------------------------------
+# Buttons & switches
+#-----------------------------------------------------------------------
+# Two push buttons
+#NET BTN1        LOC = P94 | IOSTANDARD = LVCMOS33;
+#NET BTN0        LOC = P143 |IOSTANDARD = LVCMOS33;
+
+# Two slide switches
+#NET SW1         LOC = P124 | IOSTANDARD = LVCMOS33;
+#NET SW0         LOC = P39 | IOSTANDARD = LVCMOS33;
+
+#-----------------------------------------------------------------------
+# Four discrete LEDs
+#-----------------------------------------------------------------------
+#NET LD3         LOC = P64 | IOSTANDARD = LVCMOS33;
+#NET LD2         LOC = P66 | IOSTANDARD = LVCMOS33;
+#NET LD1         LOC = P68 | IOSTANDARD = LVCMOS33;
+NET led         LOC = P69 | IOSTANDARD = LVCMOS33;
+
+#-----------------------------------------------------------------------
+# Four-digit time-multiplexed seven-segment LED display
+#-----------------------------------------------------------------------
+# LED segments
+#NET disp_seg_o<6>   LOC = P56 |IOSTANDARD = LVCMOS33;  # segment a
+#NET disp_seg_o<5>   LOC = P53 |IOSTANDARD = LVCMOS33;  # segment b
+#NET disp_seg_o<4>   LOC = P60 |IOSTANDARD = LVCMOS33;  # segment c
+#NET disp_seg_o<3>   LOC = P58 |IOSTANDARD = LVCMOS33;  # segment d
+#NET disp_seg_o<2>   LOC = P57 |IOSTANDARD = LVCMOS33;  # segment e
+#NET disp_seg_o<1>   LOC = P54 |IOSTANDARD = LVCMOS33;  # segment f
+#NET disp_seg_o<0>   LOC = P61 |IOSTANDARD = LVCMOS33;  # segment g
+# Digits
+#NET disp_dig_o<3>   LOC = P130 |IOSTANDARD = LVCMOS33;
+#NET disp_dig_o<2>   LOC = P129 |IOSTANDARD = LVCMOS33;
+#NET disp_dig_o<1>   LOC = P128 |IOSTANDARD = LVCMOS33;
+#NET disp_dig_o<0>   LOC = P126 |IOSTANDARD = LVCMOS33;
+
+# Decimal point
+#NET disp_dp         LOC = P59 |IOSTANDARD = LVCMOS33;
+
+#-----------------------------------------------------------------------
+# Clock
+#-----------------------------------------------------------------------
+NET clk           LOC = P38 |IOSTANDARD = LVCMOS33;
+#Created by Constraints Editor (xc2c256-tq144-6) - 2020/03/07
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 100 us HIGH 50%;
+
+
+#-----------------------------------------------------------------------
+# GIO header
+#-----------------------------------------------------------------------
+# 40-pin (2x20) 0.1" pin header, with 37 IO lines, labeled GIO1 - GIO37
+#-----------------------------------------------------------------------
+NET "enc_a"				LOC = "P92";
+NET "enc_a"				IOSTANDARD = LVCMOS33;
+NET "enc_b"				LOC = "P91";
+NET "enc_b"				IOSTANDARD = LVCMOS33;
+NET "btn"				LOC = "P88";
+NET "btn"				IOSTANDARD = LVCMOS33;
+#NET "GIO<4>"				LOC = "P87";
+#NET "GIO<4>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<5>"				LOC = "P86";
+#NET "GIO<5>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<6>"				LOC = "P85";
+#NET "GIO<6>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<7>"				LOC = "P83";
+#NET "GIO<7>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<8>"				LOC = "P82";
+#NET "GIO<8>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<9>"				LOC = "P81";
+#NET "GIO<9>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<10>"				LOC = "P80";
+#NET "GIO<10>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<11>"				LOC = "P79";
+#NET "GIO<11>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<12>"				LOC = "P78";
+#NET "GIO<12>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<13>"				LOC = "P77";
+#NET "GIO<13>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<14>"				LOC = "P76";
+#NET "GIO<14>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<15>"				LOC = "P75";
+#NET "GIO<15>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<16>"				LOC = "P74";
+#NET "GIO<16>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<17>"				LOC = "P71";
+#NET "GIO<17>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<18>"				LOC = "P70";
+#NET "GIO<18>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<19>"				LOC = "P52";
+#NET "GIO<19>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<20>"				LOC = "P51";
+#NET "GIO<20>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<21>"				LOC = "P50";
+#NET "GIO<21>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<22>"				LOC = "P49";
+#NET "GIO<22>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<23>"				LOC = "P48";
+#NET "GIO<23>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<24>"				LOC = "P46";
+#NET "GIO<24>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<25>"				LOC = "P45";
+#NET "GIO<25>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<26>"				LOC = "P44";
+#NET "GIO<26>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<27>"				LOC = "P13";
+#NET "GIO<27>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<28>"				LOC = "P14";
+#NET "GIO<28>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<29>"				LOC = "P15";
+#NET "GIO<29>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<30>"				LOC = "P16";
+#NET "GIO<30>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<31>"				LOC = "P17";
+#NET "GIO<31>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<32>"				LOC = "P18";
+#NET "GIO<32>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<33>"				LOC = "P105";
+#NET "GIO<33>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<34>"				LOC = "P106";
+#NET "GIO<34>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<35>"				LOC = "P107";
+#NET "GIO<35>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<36>"				LOC = "P110";
+#NET "GIO<36>"				IOSTANDARD = LVCMOS33;
+#NET "GIO<37>"				LOC = "P111";
+#NET "GIO<37>"				IOSTANDARD = LVCMOS33;
