@@ -41,4 +41,8 @@ I used four constants,move, hun, ten & one used for the calculation in the procc
 ### ALU_tb_00.vhd
 The code for this testbench was inspired by the testbenches writen in our previous projects. We defined the port names andf values for our component ALU. We also defined the signals we would assign to the ALU ports in the uut. In the process we assign number 1 and number 2 each a number and set the choice_i to zero. After that  we have a for loop going from 0 to 15 each time incrementing choice_i by 1 so in each cycle we can test a diffferent ALU function.
 ### top.vhd
+The code for top was inspired by previous top.vhd files from our previous projects. In the port section we chose to assign SW0_CPLD to SW3_CPLD to number 1 meaning each switch changes a diferent bit in numb1_i. We did the same for number 2 but with SW4_CPLD to SW7_CPLD and also for choice_i SW8_CPLD to SW11_CPLD.
++ **disp_seg_o & disp_dig_o** serves us to send our data to the seven segment display.
++ **s_num1(x)/s_num2(x)/s_choice(x)** the x here decides which bit is assigned to which switch. For example SW0_CPLD is assigned to s_num1(0) meaning by switching the switch on and of we can edit the first bit of the first number while the program is running.
++ **sub-blocks** the code for these sub blocks were writen in the same way our previous sub blocks were writen. In our case there are three sub blocks Clock_enable, ALU and Driver_7seg.
 ## The result / The conclusion
