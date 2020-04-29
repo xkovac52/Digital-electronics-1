@@ -1,8 +1,8 @@
 # Arithmetic logic unit project for Digital Electronics 1
 ## The Task
-My task was creating a arithmetic logic unit that offers a method for the user to change the value of both numbers and change with operation should be displayed while using a coolboard unit.
+My task was creating a arithmetic logic unit that offers a method for the user to change the value of both numbers and change with operation should be displayed while using a coolboard unit. 
 ## The Execution
-The code for this project was writen in ISE on a vritual windows 7 running in virtulal box on a windows 10 notebook. This was done because I ran into problems while instaling ISE on windows 10 as on C: it couldnt install itself and on D: it would crash if I tried to open any project. Clock_enable.vhd, driver_7seg.vhd and hex_to_7seg.vhd where taken from our previous projects that we wrote in class. ALU_tb_00.vhd, top.vhd and ALU.vhd where writen by myself. 
+The code for this project was writen in ISE on a vritual windows 7 running in virtulal box on a windows 10 notebook. This was done because I ran into problems while instaling ISE on windows 10 as on C: it couldnt install itself and on D: it would crash if I tried to open any project. Clock_enable.vhd, driver_7seg.vhd and hex_to_7seg.vhd where taken from our previous projects that we wrote in class. ALU_tb_00.vhd, top.vhd and ALU.vhd where writen by myself. The theory for this project I looked up on both the Slovak and English wikipedia.
 ### ALU.vhd
 In this vhd file is the main part of the project writen. I chose two numbers both with 4 bits giving us a max for 15 for each number and a choice number which is a 4 bit number that can be set to a number which will decide what operation we want the ALU to commit.
 
@@ -46,3 +46,5 @@ The code for top was inspired by previous top.vhd files from our previous projec
 + **s_num1(x)/s_num2(x)/s_choice(x)** the x here decides which bit is assigned to which switch. For example SW0_CPLD is assigned to s_num1(0) meaning by switching the switch on and of we can edit the first bit of the first number while the program is running.
 + **sub-blocks** the code for these sub blocks were writen in the same way our previous sub blocks were writen. In our case there are three sub blocks Clock_enable, ALU and Driver_7seg.
 ## The result / The conclusion
+![Screenshot](simulation.png)
++ As is seen in the screenshot above I was able to simulate the testbench however s_res and alu_test_o have they value set as unknown that is most likely caused by the results of calculation not being compatible with s_res meaning that alu_test_o cant have the results either. This simulation was done without my bin to BCD as there are problem with the conversion from binary to integer and from rounding down real numbers in FLOOR(). The second problem was that in this part of the code vhdl couldn't recognize / and * and threw an error that 0 definitions where found for them. FOr the first problem I searched around the internet to find how to convert those numbers however none of them worked. About the second problem I learned from the internet that it seem that / and * only work with unsigned numbers however even converting those numbers to unsigned didn't fix the problem. 
